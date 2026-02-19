@@ -1,0 +1,69 @@
+
+#root {
+  min-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.welcome-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 800;    
+  font-size: 1rem;      
+  line-height: 1.2;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 2px; 
+  text-align: center;
+  color: #6c6c6d;      
+}
+
+.welcome-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;   
+  font-size: 2rem;      
+  letter-spacing: 2px;   
+  text-align: center;
+  color: #7e7b7b;           
+  margin-bottom: 2rem;
+}
+
+.jobs-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.job-card {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  
+}
+
+.job-input {
+  width: 95%;
+  padding: 8px;
+  margin: 8px 0;
+  border-radius: 6px;
+  justify-content: center;
+  border: 1px solid #ccc;
+}
+
+.job-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  background-color: #09665a;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.job-btn:hover {
+  background-color: #25395a;
+}
