@@ -49,11 +49,11 @@ function App() {
           confirmButtonText: "OK"
         })
       })
-      .catch(() => {
+      .catch((error) => {
         Swal.fire({
           icon: "error",
           title: "Error",
-          text: "Ocurrió un problema al enviar la postulación"
+          text: error.message || "Ocurrió un problema al enviar la postulación"
         })
       });
   };
