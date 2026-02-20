@@ -22,7 +22,18 @@ export const applyToJob = (candidate, jobId, repoUrl) => {
       uuid: candidate.uuid,
       jobId: jobId,
       candidateId: candidate.candidateId,
-      repoUrl: repoUrl
+      repoUrl: repoUrl,
+      applicationId: candidate.applicationId
     })
-  }).then(res => res.json());
+  }).then(res => {
+    if (!res.ok) {
+      return res.json().then(errorData => {
+        // junta todos los mensajes de fieldErrors en un solo string
+        const fieldErrors = errorData?.details?.fieldErrors || {};
+        const messages = Object.values(fieldErrors).flat().join(", ");
+        throw new Error(messages || errorData.error || `Error ${res.status}`);
+      });
+    }
+    return res.json();
+  });
 };
